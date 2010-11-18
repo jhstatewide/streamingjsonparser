@@ -19,11 +19,10 @@ This gem was developed to interface to [Riak](https://wiki.basho.com/display/RIA
 
 Example
 -------
-<code>
     streaming_json_parser = StreamingJSONParser.new
     uri = URI.parse("http://example.com/json_stream")
     http = Net::HTTP.new(uri.host, uri.port)
-    \# mmm, chunky HTTP
+    # mmm, chunky HTTP
     http.request_get(uri.request_uri) do |res|
         res.read_body do |chunk|
            streaming_json_parser << chunk
@@ -33,4 +32,3 @@ Example
            end
         end
     end
-</code>
