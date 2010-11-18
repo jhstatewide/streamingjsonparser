@@ -1,0 +1,596 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf8" />
+<title>Class: StreamingJSONParser</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (S)</a> &raquo; 
+    
+    
+    <span class="title">StreamingJSONParser</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: StreamingJSONParser
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">StreamingJSONParser</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/streaming_json_parser.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+The StreamingJSONParser may be used when an HTTP server returns JSON
+objects in chunks. Add the chunks with &lt;&lt; and then ask process to see
+if there are any available.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Author:</h3>
+<ul class="author">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>
+Joshua Harding
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%3C%3C-instance_method" title="#&lt;&lt; (instance method)">- (Object) <strong>&lt;&lt;</strong>(string) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Adds a string to the parser&#8217;s buffer.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#buffer-instance_method" title="#buffer (instance method)">- (String) <strong>buffer</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Access the current&#8217;s buffer&#8217;s contents.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (StreamingJSONParser) <strong>initialize</strong> </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+A new instance of StreamingJSONParser.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#process-instance_method" title="#process (instance method)">- (Array) <strong>process</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Examine the buffer and possibly return a list of JSON chunks.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="StreamingJSONParser (class)">StreamingJSONParser</a></span></tt>) <strong>initialize</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A new instance of StreamingJSONParser
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25
+26
+27</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/streaming_json_parser.rb', line 25</span>
+
+<span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span>
+  <span class='@buffer ivar id'>@buffer</span> <span class='assign token'>=</span> <span class='string val'>&quot;&quot;</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="<<-instance_method">
+  
+    - (<tt>Object</tt>) <strong>&lt;&lt;</strong>(string) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Adds a string to the parser&#8217;s buffer
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>string</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+to be added to the buffer
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/streaming_json_parser.rb', line 32</span>
+
+<span class='def def kw'>def</span> <span class='lshft op'>&lt;&lt;</span><span class='lparen token'>(</span><span class='string identifier id'>string</span><span class='rparen token'>)</span>
+  <span class='@buffer ivar id'>@buffer</span> <span class='lshft op'>&lt;&lt;</span> <span class='string identifier id'>string</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="buffer-instance_method">
+  
+    - (<tt>String</tt>) <strong>buffer</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Access the current&#8217;s buffer&#8217;s contents
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the contents of the parser&#8217;s buffer
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/streaming_json_parser.rb', line 39</span>
+
+<span class='def def kw'>def</span> <span class='buffer identifier id'>buffer</span>
+  <span class='@buffer ivar id'>@buffer</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="process-instance_method">
+  
+    - (<tt>Array</tt>) <strong>process</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Examine the buffer and possibly return a list of JSON chunks
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+a list of strings containing complete JSON documents
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/streaming_json_parser.rb', line 46</span>
+
+<span class='def def kw'>def</span> <span class='process identifier id'>process</span>
+  <span class='comment val'># start of first JSON</span>
+  <span class='startpos identifier id'>startpos</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span>
+  <span class='comment val'># end of last JSON</span>
+  <span class='endpos identifier id'>endpos</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span>
+  <span class='comment val'># current position of JSON cursor</span>
+  <span class='cursorpos identifier id'>cursorpos</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+  <span class='comment val'># brace nest count</span>
+  <span class='bracecount identifier id'>bracecount</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+  <span class='comment val'># character positions of first { and } of repeated JSON docs</span>
+  <span class='spans identifier id'>spans</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+  <span class='comment val'># are we inside &quot;</span>
+  <span class='in_double_quote identifier id'>in_double_quote</span> <span class='assign token'>=</span> <span class='false false kw'>false</span>
+  <span class='comment val'># are we inside '</span>
+  <span class='in_single_quote identifier id'>in_single_quote</span> <span class='assign token'>=</span> <span class='false false kw'>false</span>
+  
+  <span class='@buffer ivar id'>@buffer</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='dot token'>.</span><span class='times identifier id'>times</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='i identifier id'>i</span><span class='bitor op'>|</span>
+    <span class='current_char identifier id'>current_char</span> <span class='assign token'>=</span> <span class='@buffer ivar id'>@buffer</span><span class='lbrack token'>[</span><span class='i identifier id'>i</span><span class='comma token'>,</span><span class='integer val'>1</span><span class='rbrack token'>]</span>
+    <span class='last_char identifier id'>last_char</span> <span class='assign token'>=</span> <span class='@buffer ivar id'>@buffer</span><span class='lbrack token'>[</span><span class='i identifier id'>i</span><span class='minus op'>-</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>1</span><span class='rbrack token'>]</span>
+
+    <span class='comment val'># if the last character is escaped this means</span>
+    <span class='comment val'># we don't have to process anything..</span>
+    <span class='next next kw'>next</span> <span class='if if_mod kw'>if</span> <span class='last_char identifier id'>last_char</span> <span class='eq op'>==</span> <span class='string val'>'\\'</span>
+
+    <span class='comment val'># okay, now if we are in a quote and then skip if needed</span>
+    <span class='if if kw'>if</span> <span class='in_double_quote identifier id'>in_double_quote</span>
+      <span class='next next kw'>next</span> <span class='if if_mod kw'>if</span> <span class='current_char identifier id'>current_char</span> <span class='neq op'>!=</span> <span class='string val'>'&quot;'</span>
+    <span class='end end kw'>end</span>
+
+    <span class='comment val'># okay, now if we are in single quote and then skip if needed</span>
+    <span class='if if kw'>if</span> <span class='in_single_quote identifier id'>in_single_quote</span>
+      <span class='next next kw'>next</span> <span class='if if_mod kw'>if</span> <span class='current_char identifier id'>current_char</span> <span class='neq op'>!=</span> <span class='string val'>&quot;'&quot;</span>
+    <span class='end end kw'>end</span>
+    
+    <span class='case case kw'>case</span> <span class='current_char identifier id'>current_char</span>
+    <span class='when when kw'>when</span> <span class='string val'>'&quot;'</span>
+      <span class='comment val'># flip the bit</span>
+      <span class='in_double_quote identifier id'>in_double_quote</span> <span class='assign token'>=</span> <span class='in_double_quote identifier id'>in_double_quote</span> <span class='integer val'>? </span><span class='false false kw'>false</span> <span class='colon op'>:</span> <span class='true true kw'>true</span>
+
+    <span class='when when kw'>when</span> <span class='string val'>&quot;'&quot;</span>
+      <span class='in_single_quote identifier id'>in_single_quote</span> <span class='assign token'>=</span> <span class='in_single_quote identifier id'>in_single_quote</span> <span class='integer val'>? </span><span class='false false kw'>false</span> <span class='colon op'>:</span> <span class='true true kw'>true</span>
+
+    <span class='when when kw'>when</span> <span class='string val'>'{'</span>
+      <span class='startpos identifier id'>startpos</span> <span class='assign token'>=</span> <span class='i identifier id'>i</span> <span class='if if_mod kw'>if</span> <span class='startpos identifier id'>startpos</span> <span class='eq op'>==</span> <span class='nil nil kw'>nil</span>
+      <span class='bracecount identifier id'>bracecount</span> <span class='opasgn op'>+=</span> <span class='integer val'>1</span>
+      <span class='if if kw'>if</span> <span class='bracecount identifier id'>bracecount</span> <span class='eq op'>==</span> <span class='integer val'>1</span>
+        <span class='cursorpos identifier id'>cursorpos</span> <span class='assign token'>=</span> <span class='i identifier id'>i</span>
+      <span class='end end kw'>end</span>
+
+    <span class='when when kw'>when</span> <span class='string val'>'}'</span>
+      <span class='bracecount identifier id'>bracecount</span> <span class='opasgn op'>-=</span> <span class='integer val'>1</span>
+
+      <span class='comment val'># this signifies that we have found a closing brace!</span>
+      <span class='if if kw'>if</span> <span class='bracecount identifier id'>bracecount</span> <span class='eq op'>==</span> <span class='integer val'>0</span>
+        <span class='spans identifier id'>spans</span> <span class='lshft op'>&lt;&lt;</span> <span class='lbrack token'>[</span><span class='cursorpos identifier id'>cursorpos</span><span class='comma token'>,</span> <span class='i identifier id'>i</span><span class='rbrack token'>]</span>
+        <span class='cursorpos identifier id'>cursorpos</span> <span class='assign token'>=</span> <span class='i identifier id'>i</span>
+        <span class='endpos identifier id'>endpos</span> <span class='assign token'>=</span> <span class='i identifier id'>i</span>
+      <span class='end end kw'>end</span>
+    <span class='end end kw'>end</span> <span class='comment val'># end of Case</span>
+
+  <span class='end end kw'>end</span>
+  <span class='comment val'># take the 'spans' and then turn them into string fragments</span>
+  <span class='strings identifier id'>strings</span> <span class='assign token'>=</span> <span class='spans identifier id'>spans</span><span class='dot token'>.</span><span class='map identifier id'>map</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='span identifier id'>span</span><span class='bitor op'>|</span> <span class='@buffer ivar id'>@buffer</span><span class='lbrack token'>[</span><span class='span identifier id'>span</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='span identifier id'>span</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='minus op'>-</span><span class='span identifier id'>span</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span><span class='plus op'>+</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='rbrace token'>}</span>
+  <span class='comment val'># if we found some JSON chop off the beginning of the string...</span>
+  <span class='if if kw'>if</span> <span class='lparen token'>(</span><span class='startpos identifier id'>startpos</span> <span class='neq op'>!=</span> <span class='nil nil kw'>nil</span> <span class='andop op'>&amp;&amp;</span> <span class='endpos identifier id'>endpos</span> <span class='neq op'>!=</span> <span class='nil nil kw'>nil</span><span class='rparen token'>)</span>
+    <span class='@buffer ivar id'>@buffer</span> <span class='assign token'>=</span> <span class='@buffer ivar id'>@buffer</span><span class='lbrack token'>[</span><span class='endpos identifier id'>endpos</span><span class='plus op'>+</span><span class='integer val'>1</span> <span class='dot2 op'>..</span> <span class='@buffer ivar id'>@buffer</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='plus op'>+</span><span class='integer val'>1</span><span class='rbrack token'>]</span>
+  <span class='end end kw'>end</span>
+  <span class='return return kw'>return</span> <span class='strings identifier id'>strings</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Wed Nov 17 19:28:38 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.2 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>
