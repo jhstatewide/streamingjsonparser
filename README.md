@@ -1,13 +1,13 @@
 StreamingJSONParser
 ====================================
 
-**Homepage**:     [http://github.com/jhstatewide/streamingjsonparser](http://github.com/jhstatewide/streamingjsonparser)
-**Git**:          [http://github.com/jhstatewide/streamingjsonparser](http://github.com/jhstatewide/streamingjsonparser)   
-**Author**:       Joshua Harding
-**Copyright**:    2010
-**License**:      GPL
-**Latest Version**: 0.1
-**Release Date**: November 17th 2010
+* **Homepage**:     [http://github.com/jhstatewide/streamingjsonparser](http://github.com/jhstatewide/streamingjsonparser)
+* **Git**:          [http://github.com/jhstatewide/streamingjsonparser](http://github.com/jhstatewide/streamingjsonparser)
+* **Author**:       Joshua Harding
+* **Copyright**:    2010
+* **License**:      GPL
+* **Latest Version**: 0.1
+* **Release Date**: November 17th 2010
 
 Synopsis
 --------
